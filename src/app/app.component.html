@@ -1,3 +1,4 @@
-<div class="w-full h-screen flex justify-center items-center">
-  <h1 class="text-2xl text-blue-400 font-bold">ANGULAR 14 & TAILWIND</h1>
+<app-header (menuActiveEvent)="getMenuActive($event)"></app-header>
+<div class="w-full" style="box-sizing: inherit; display: block">
+  <app-main [menuActive]="menuActive"></app-main>
 </div>

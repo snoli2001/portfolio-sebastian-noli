@@ -1,0 +1,128 @@
+<header
+  #someHeader
+  class="flex justify-between items-center fixed top-0 z-10 w-full"
+>
+  <nav
+    class="relative flex items-center justify-between flex-wrap font-jetBrains w-full z-20"
+  >
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <a class="flex justify-center items-center" href="">
+        <img
+          class="w-8 h-8 mr-2 animate-bounce"
+          src="../assets/images/62b2405d3769b50bba992876.png"
+          alt=""
+          style="filter: brightness(5)"
+        />
+      </a>
+      <span class="font-semibold text-lg tracking-tight">Sebastian Noli</span>
+    </div>
+    <div class="md:flex items-center menu-list">
+      <ul>
+        <li class="mr-4">
+          <a href="#responsive-header" class="text-teal-200 hover:text-white">
+            <span class="text-white"> 01. </span>
+            About
+          </a>
+        </li>
+        <li class="mr-4">
+          <a
+            href="#responsive-header"
+            class="text-teal-200 hover:text-white mr-4"
+          >
+            <span class="text-white"> 02. </span>
+            Experience
+          </a>
+        </li>
+        <li class="mr-4">
+          <a
+            href="#responsive-header"
+            class="text-teal-200 hover:text-white mr-4"
+          >
+            <span class="text-white">03.</span>
+            Skills
+          </a>
+        </li>
+        <li class="mr-4">
+          <a href="#responsive-header" class="text-teal-200 hover:text-white">
+            <span class="text-white">04. </span>
+            Contact
+          </a>
+        </li>
+      </ul>
+      <div>
+        <button
+          href="#"
+          class="ml-3 -mt-2 text-sm px-4 py-2 leading-none border rounded text-teal-200 border-teal-200 hover:text-teal-200 hover:bg-teal-200 hover:bg-opacity-10"
+        >
+          Resume
+        </button>
+      </div>
+    </div>
+    <div class="hamburger">
+      <div>
+        <button (click)="activateHamMenu()">
+          <div class="ham-box">
+            <div
+              class="ham-box-inner"
+              [ngClass]="{
+                'ham-box-inner': !hamMenuActive,
+                'ham-box-inner-active': hamMenuActive
+              }"
+            ></div>
+          </div>
+        </button>
+        <aside
+          [ngClass]="{
+            'aside-navbar-active': hamMenuActive,
+            'aside-navbar': !hamMenuActive
+          }"
+        >
+          <nav class="font-jetBrains">
+            <ol>
+              <li>
+                <a
+                  href="#responsive-header"
+                  class="text-teal-200 hover:text-white"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#responsive-header"
+                  class="text-teal-200 hover:text-white"
+                >
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#responsive-header"
+                  class="text-teal-200 hover:text-white"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#responsive-header"
+                  class="text-teal-200 hover:text-white"
+                >
+                  Contact
+                </a>
+              </li>
+            </ol>
+            <div>
+              <button
+                href="#"
+                class="text-sm mt-10 px-8 py-4 leading-none border rounded text-teal-200 border-teal-200 hover:text-teal-200 hover:bg-teal-200 hover:bg-opacity-10"
+              >
+                Resume
+              </button>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </nav>
+</header>
