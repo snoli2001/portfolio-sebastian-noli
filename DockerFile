@@ -7,4 +7,4 @@ RUN npm run build --prod
 
 # step 2
 FROM nginx:alpine
-COPY --from=node /app/dist/angular14-tailwind-image /usr/share/nginx/html
+COPY --from=node /app/dist/portfolio-sebastian-noli /usr/share/nginx/html
