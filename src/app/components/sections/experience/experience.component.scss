@@ -1,9 +1,10 @@
-.numbered-heading-left {
+.numbered-heading-right {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   position: relative;
   margin: 10px 0px 40px;
+  justify-content: end;
   width: 100%;
   font-size: clamp(26px, 5vw, 32px);
   white-space: nowrap;
@@ -12,10 +13,10 @@
   @apply font-jetBrains;
 }
 
-.numbered-heading-left::before {
+.numbered-heading-right::before {
   position: relative;
   bottom: -3px;
-  counter-increment: section 1;
+  counter-increment: section 2;
   content: "0" counter(section) ".";
   margin-right: 10px;
   color: white;
@@ -23,7 +24,7 @@
   font-weight: 400;
 }
 
-.numbered-heading-left::after {
+.numbered-heading-right::after {
   content: "";
   display: block;
   position: relative;
@@ -42,4 +43,90 @@
   .experience-container {
     padding: 20px 20px;
   }
+}
+
+//tabs
+
+.tabs {
+  position: relative;
+  @apply font-jetBrains;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  width: 680px;
+  height: 360px;
+  padding: 30px 20px;
+  // box-shadow: 5px 5px 10px 5px #ccc;
+  overflow: hidden;
+}
+
+.tabs .tab-header {
+  float: left;
+  width: 180px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  padding: 50px 0px;
+  text-transform: uppercase;
+}
+
+.tabs .tab-header > div {
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #8892b0;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.tabs .tab-header > div.active {
+  color: #007cf0;
+}
+
+.tabs .tab-content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  color: #8892b0;
+}
+
+.tabs .tab-content > div {
+  position: absolute;
+  // text-align: center;
+  padding: 40px 20px;
+  top: -200%;
+  opacity: 0;
+}
+
+.tabs .tab-content > div.active {
+  position: absolute;
+  // text-align: center;
+  padding: 40px 20px;
+  top: -200%;
+  opacity: 1;
+  transition: opacity 700ms;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tabs .tab-content > div.active {
+  top: 0px;
+}
+
+.tabs .tab-indicator {
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  background: #007cf0;
+  left: 198px;
+  top: 80px;
+  transition: all 500ms ease-in-out;
 }
