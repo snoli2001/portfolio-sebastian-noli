@@ -9,6 +9,7 @@ import { IntroductionComponent } from './components/sections/introduction/introd
 import { AboutComponent } from './components/sections/about/about.component';
 import { ExperienceComponent } from './components/sections/experience/experience.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     IntroductionComponent,
     AboutComponent,
     ExperienceComponent,
+    BaseLayoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
