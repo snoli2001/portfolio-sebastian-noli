@@ -19,7 +19,10 @@
     <div class="md:flex items-center menu-list">
       <ul>
         <li class="mr-4">
-          <a href="#responsive-header" class="text-teal-200 hover:text-white">
+          <a
+            (click)="scrollTo('about-container')"
+            class="text-teal-200 hover:text-white cursor-pointer"
+          >
             <span class="text-white"> 01. </span>
             About
           </a>
@@ -51,7 +54,7 @@
       </ul>
       <div>
         <button
-          href="#"
+          (click)="seeResume()"
           class="ml-3 -mt-2 text-sm px-4 py-2 leading-none border rounded text-teal-200 border-teal-200 hover:text-teal-200 hover:bg-teal-200 hover:bg-opacity-10"
         >
           Resume
@@ -81,7 +84,7 @@
             <ol>
               <li>
                 <a
-                  href="#responsive-header"
+                  (click)="responsiveScrollTo('about-container')"
                   class="text-teal-200 hover:text-white"
                 >
                   About
@@ -114,7 +117,7 @@
             </ol>
             <div>
               <button
-                href="#"
+                (click)="seeResume()"
                 class="text-sm mt-10 px-8 py-4 leading-none border rounded text-teal-200 border-teal-200 hover:text-teal-200 hover:bg-teal-200 hover:bg-opacity-10"
               >
                 Resume

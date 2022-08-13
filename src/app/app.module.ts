@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { IntroductionComponent } from './components/sections/introduction/introduction.component';
+import { AboutComponent } from './components/sections/about/about.component';
+import { ExperienceComponent } from './components/sections/experience/experience.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    AboutComponent,
+    ExperienceComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
