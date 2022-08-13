@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
 
   seeResume(): void {
     this.pdfService
-      .downloadPDF('../../../assets/documents/SebastianNoliCV2022.pdf')
+      .downloadPDF('./assets/documents/SebastianNoliCV2022.pdf')
       .subscribe((response) => {
         const fileURL = URL.createObjectURL(response);
         window.open(fileURL, '_blank');
