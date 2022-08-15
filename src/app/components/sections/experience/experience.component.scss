@@ -48,39 +48,37 @@
 //tabs
 
 .tabs {
-  position: relative;
-  @apply font-jetBrains;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  width: 680px;
-  height: 360px;
-  padding: 30px 20px;
-  // box-shadow: 5px 5px 10px 5px #ccc;
-  overflow: hidden;
+  @apply w-full lg:w-1/2 flex flex-col lg:flex-row font-jetBrains pt-8 pb-5 overflow-hidden relative;
+  height: 500px;
 }
 
+// .tabs .tab-header {
+//   float: left;
+//   width: 110px;
+//   height: 100%;
+//   border-right: 1px solid #ccc;
+//   padding: 50px 0px;
+//   text-transform: uppercase;
+// }
+
 .tabs .tab-header {
-  float: left;
-  width: 180px;
-  height: 100%;
-  border-right: 1px solid #ccc;
-  padding: 50px 0px;
-  text-transform: uppercase;
+  @apply flex flex-row lg:flex-col w-full lg:w-28 lg:border-r border-b lg:border-b-0 border-[#ccc] uppercase text-[#8892b0] pt-12;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
 }
 
 .tabs .tab-header > div {
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #8892b0;
-  cursor: pointer;
-  padding-left: 10px;
+  @apply lg:w-28 w-20 sm:w-32 pl-3 cursor-pointer h-9 lg:h-12 flex justify-center lg:block text-sm sm:text-base;
+  transition: all 800ms ease-in-out;
 }
 
-.tabs .tab-header > div.active {
+.tab-header-active {
+  // width: 100%;
   color: #007cf0;
+  // border-right: 3px #007cf0 solid;
+  // border-radius: 3px;
+  // transition: all 800ms ease-in-out;
 }
 
 .tabs .tab-content {
@@ -91,22 +89,21 @@
 }
 
 .tabs .tab-content > div {
-  position: absolute;
+  // position: absolute;
   // text-align: center;
   padding: 40px 20px;
   top: -200%;
   opacity: 0;
+  height: 100%;
 }
 
-.tabs .tab-content > div.active {
+.tabs .tab-content > .tab-content-active {
   position: absolute;
-  // text-align: center;
   padding: 40px 20px;
   top: -200%;
   opacity: 1;
   transition: opacity 700ms;
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -117,16 +114,35 @@
   }
 }
 
-.tabs .tab-content > div.active {
+.tabs .tab-content > div.tab-content-active {
   top: 0px;
 }
 
 .tabs .tab-indicator {
   position: absolute;
   width: 3px;
-  height: 50px;
+  height: 58px;
   background: #007cf0;
-  left: 198px;
-  top: 80px;
+  left: 110px;
+  top: 60px;
   transition: all 500ms ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .tabs .tab-indicator {
+    width: 120px;
+    height: 3px;
+    left: 0px;
+    top: 114px;
+  }
+}
+
+@media (max-width: 639px) {
+  .tabs .tab-indicator {
+    width: 80px;
+    height: 3px;
+    left: 0px;
+    top: 114px;
+  }
+}
+
