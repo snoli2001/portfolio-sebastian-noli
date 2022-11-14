@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
 
   listener: any;
   scrollPosition = 0;
+  showLanguagesDropDown: boolean = false;
 
   constructor(private renderer2: Renderer2, private pdfService: PdfService) {}
 
@@ -66,5 +67,9 @@ export class HeaderComponent implements OnInit {
         const fileURL = URL.createObjectURL(response);
         window.open(fileURL, '_blank');
       });
+  }
+
+  toggleLanguagesDropdown(): void {
+    this.showLanguagesDropDown = !this.showLanguagesDropDown;
   }
 }
