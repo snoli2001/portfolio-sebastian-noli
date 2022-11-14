@@ -30,8 +30,7 @@
         <li class="mr-4">
           <a
             (click)="scrollTo('experience-container')"
-            href="#responsive-header"
-            class="text-teal-200 hover:text-white mr-4"
+            class="text-teal-200 hover:text-white mr-4 cursor-pointer"
           >
             <span class="text-white"> 02. </span>
             Experience
@@ -39,8 +38,8 @@
         </li>
         <li class="mr-4">
           <a
-            href="#responsive-header"
-            class="text-teal-200 hover:text-white mr-4"
+            (click)="scrollTo('skills-container')"
+            class="text-teal-200 hover:text-white mr-4 cursor-pointer"
           >
             <span class="text-white">03.</span>
             Skills
@@ -94,7 +93,6 @@
               <li>
                 <a
                   (click)="responsiveScrollTo('experience-container')"
-                  href="#responsive-header"
                   class="text-teal-200 hover:text-white"
                 >
                   Experience
@@ -102,7 +100,7 @@
               </li>
               <li>
                 <a
-                  href="#responsive-header"
+                  (click)="responsiveScrollTo('skills-container')"
                   class="text-teal-200 hover:text-white"
                 >
                   Skills

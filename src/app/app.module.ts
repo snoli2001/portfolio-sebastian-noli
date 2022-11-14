@@ -10,6 +10,7 @@ import { AboutComponent } from './components/sections/about/about.component';
 import { ExperienceComponent } from './components/sections/experience/experience.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
+import { SkillsComponent } from './components/sections/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BaseLayoutComponent } from './layout/base-layout/base-layout.component'
     AboutComponent,
     ExperienceComponent,
     BaseLayoutComponent,
+    SkillsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
