@@ -44,3 +44,13 @@
   grid-auto-rows: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
+
+.skills-container {
+  padding: 75px 100px;
+}
+
+@media (max-width: 1024px) {
+  .skills-container {
+    padding: 20px 20px;
+  }
+}
