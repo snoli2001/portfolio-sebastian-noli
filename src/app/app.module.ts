@@ -11,6 +11,7 @@ import { ExperienceComponent } from './components/sections/experience/experience
 import { HttpClientModule } from '@angular/common/http';
 import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
 import { SkillsComponent } from './components/sections/skills/skills.component';
+import { ContactComponent } from './components/sections/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SkillsComponent } from './components/sections/skills/skills.component';
     ExperienceComponent,
     BaseLayoutComponent,
     SkillsComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

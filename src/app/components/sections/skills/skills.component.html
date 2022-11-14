@@ -1,4 +1,20 @@
 <section #skills class="skills-container w-full lg:h-screen">
   <h2 class="numbered-heading">Skills</h2>
-  <div></div>
+  <div class="skills-gallery">
+    <div
+      *ngFor="let skill of skillsInfo"
+      class="bg-[#072f48] w-full rounded-lg shadow-lg h-full hover:-translate-y-3"
+    >
+      <div
+        class="w-full flex items-center justify-center h-3/4 border-b border-teal-300"
+      >
+        <img [src]="skill.imageUrl" alt="" class="w-2/5" />
+      </div>
+      <div
+        class="w-full flex items-center justify-center text-teal-200 h-1/4 font-jetBrains"
+      >
+        <p>{{ skill.name }}</p>
+      </div>
+    </div>
+  </div>
 </section>

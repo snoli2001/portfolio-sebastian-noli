@@ -37,3 +37,10 @@
   margin-left: 20px;
   background-color: #233554;
 }
+
+.skills-gallery {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}

@@ -3,8 +3,6 @@
 }
 .intro-text {
   width: 640px;
-  // font-size: large;
-  // border: 1px red solid;
 }
 
 .title > h1 {
@@ -210,7 +208,7 @@
 
 @media (max-width: 1024px) {
   .img-box {
-    // display: none;
+    display: none;
     width: 300px;
     height: 300px;
   }
