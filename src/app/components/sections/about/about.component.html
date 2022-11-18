@@ -1,33 +1,27 @@
 <section #about class="about-container w-full lg:h-screen">
-  <h2 class="numbered-heading">About Me</h2>
+  <h2 class="numbered-heading">{{ "about-me-header" | translate }}</h2>
   <div class="flex flex-col-reverse md:flex-row w-full">
     <div class="w-full md:w-1/2">
       <p class="font-jetBrains">
-        Hello! My name is Sebastián Noli and I love creating web applications.
-        My interest in programming started back in 2018 when I started studying
-        software engineering at the
+        {{ "about-me-text-1" | translate }}
         <a
           href="https://www.upc.edu.pe/en/"
           class="text-teal-200 cursor-pointer"
           target="_blank"
           >Universidad Peruana de Ciencias Aplicacadas</a
-        >. To be honest I didn't know what to expect about the career when I
-        entered. I was a simple boy who didn't know what to do with his life,
-        but everything changed when I met programming. I found my passion and
-        from that moment I just want to know more an more about it.
+        >
+        {{ "about-me-text-2" | translate }}
       </p>
       <p class="font-jetBrains mt-4">
-        Fast-forward to today. I've been working as Front-end Developer for two
-        year and currently I work together with the Technological Innovation
-        Team of the
+        {{ "about-me-text-3" | translate }}
+
         <a
           href="https://www.ucv.edu.pe/"
           class="text-teal-200 cursor-pointer"
           target="_blank"
-          >Cesar Vallejo University</a
+          >Universidad Cesar Vallejo</a
         >
-        creating systems and optimizing processes oriented to Human Resources
-        area.
+        {{ "about-me-text-4" | translate }}
       </p>
       <p></p>
     </div>

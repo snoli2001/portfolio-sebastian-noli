@@ -71,6 +71,54 @@
   color: #dff6ff;
 }
 
+.title > h1 > span.e1::before {
+  animation-name: a;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  color: #dff6ff;
+  position: absolute;
+  inset: 0;
+  content: "Hola!, Mi nombre es";
+  opacity: 1;
+}
+
+.title > h1 > span.e2::before {
+  animation-name: a2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+
+  position: absolute;
+  color: #dff6ff;
+  inset: 0;
+  content: "Sebastian Noli.";
+  opacity: 1;
+}
+.title > h1 > span.e3::before {
+  animation-name: a3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+  position: absolute;
+  inset: 0;
+  content: "Soy desarrollador de software.";
+  opacity: 1;
+  color: #dff6ff;
+}
+
 .img-box {
   display: block;
   position: relative;

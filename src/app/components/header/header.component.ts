@@ -8,6 +8,7 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -21,7 +22,13 @@ export class HeaderComponent implements OnInit {
   scrollPosition = 0;
   showLanguagesDropDown: boolean = false;
 
-  constructor(private renderer2: Renderer2, private pdfService: PdfService) {}
+  constructor(
+    private renderer2: Renderer2,
+    private pdfService: PdfService,
+    public translate: TranslateService
+  ) {
+    console.log(this.translate.currentLang);
+  }
 
   ngOnInit(): void {
     this.menuScrollListener();
@@ -71,5 +78,14 @@ export class HeaderComponent implements OnInit {
 
   toggleLanguagesDropdown(): void {
     this.showLanguagesDropDown = !this.showLanguagesDropDown;
+  }
+
+  switchLanguage(lang: string): void {
+    this.translate.use(lang);
+  }
+  closeDropDown(): void {
+    if (this.showLanguagesDropDown === true) {
+      this.showLanguagesDropDown = false;
+    }
   }
 }

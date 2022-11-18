@@ -1,0 +1,23 @@
+{
+  "title": "Hola!, Mi nombre es",
+  "title2": "Sebastián Noli",
+  "title3": "Soy desarrollador de software",
+  "intro-paragraph": "Soy un desarrollador de software especializado en diseñar y desarrollar aplicaciones web. Actualmente, trabajo como desarrollador Front-end para una de las universidades con mayor presencia en Perú",
+  "contact-btn": "Contáctame!",
+  "hire-me-btn": "Contrátame!",
+  "about-me-header": "Sobre Mi",
+  "about-nav": "Sobre Mi",
+  "experience-nav": "Experiencia",
+  "skills-nav": "Habilidades",
+  "resume-btn": "CV",
+  "about-me-text-1": "Hola! Mi nombre es Sebastian Noli y amo crear Aplicaciones Web. Mi interés por la programación comenzó en 2018 cuando comencé a estudiar Ingeniería de Software en",
+  "about-me-text-2": ". Para ser honesto, No sabía que esperar de la carrera cuando ingresé. Era un simple chico que no sabía que hacer con su vida, pero todo cambió cuando conocí la programación. Encontré mi pasión y desde ese momento solo quiero aprender más y más sobre lo que me apasiona.",
+  "about-me-text-3": "Avancemos hasta la actualidad. He estado trabajando como desarrollador Front-end ya por más de 2 años y acualemente trabajo con el equipo de Innnovación Tecnológica de la",
+  "about-me-text-4": " creando sistemas y optimizando procesos orientados al área de Recursos Humanos",
+  "exp-ucv": "Actualmente me encuentro trabajando en el equipo de Innovación Tecnológica de la Universidad César Vallejo. Mi labor es desarrollar y mantener nuevos módulos para optimizar los procesos de selección y reclutamiento de la plana docente, elaboración de contratos, administración de los horarios laborales de los colaboradores, entre otros.",
+  "exp-megapunto-1": "Mi trabajó consistió en realizar todo el desarrollo Front-end de la aplicación.",
+  "exp-megapunto-2": "Megapunto es una web transaccional que vende diferentes tipos de productos, como reportes crediticios y pines tanto de Playstation como de Netflix. Además, la aplicación permite realizar recargas de celulares de diferentes operadores y el pago de servicios básicos como luz, agua y cable.",
+  "exp-divelia": "Trabajé en múltiples proyectos para diferentes clientes tantos nacionales como extranjeros. El proyecto en el cual más colaboré fue un reproductor web de música enfocada en canciones Brasileñas.",
+  "exp-tisi": "Mi labor en esta empresa fue dar mantenimiento e implementar nuevos módulos de un ERP empresarial.",
+  "tec": "Tecnologías"
+}
