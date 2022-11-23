@@ -47,5 +47,9 @@ import { ClickOutsideDirective } from './directives/clickOutsite.directive';
 export class AppModule {}
 
 export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(
+    http,
+    'https://snoli2001.github.io/portfolio-sebastian-noli/',
+    '.json'
+  );
 }

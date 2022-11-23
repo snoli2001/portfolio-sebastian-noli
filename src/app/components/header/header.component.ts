@@ -49,7 +49,6 @@ export class HeaderComponent implements OnInit {
       } else {
         this.headerRef.nativeElement.classList.remove('nav-scrolled');
       }
-
       this.scrollPosition = positionY;
     });
   }
