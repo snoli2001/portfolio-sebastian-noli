@@ -56,10 +56,6 @@ export class ExperienceComponent implements OnInit {
         this._class('tab-content')[0]
           .getElementsByTagName('div')
           [i].classList.add('tab-content-active');
-
-        // console.log(
-        //   this._class('tab-content')[0].getElementsByTagName('div')[i]
-        // );
       });
     }
   }
