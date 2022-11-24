@@ -114,11 +114,18 @@ header {
   border-radius: 4px;
   background-color: #007cf0;
 }
-
+.language-dropdown {
+  display: none;
+}
 @media (max-width: 900px) {
   .menu-list {
     display: none;
   }
+
+  .language-dropdown {
+    display: block;
+  }
+
   .hamburger {
     display: block;
   }

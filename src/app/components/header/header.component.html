@@ -3,9 +3,11 @@
   class="flex justify-between items-center fixed top-0 z-10 w-full"
 >
   <nav
-    class="relative flex items-center justify-between flex-wrap font-jetBrains w-full z-20"
+    class="grid grid-cols-6 relative md:flex items-center md:justify-between flex-wrap font-jetBrains w-full z-20"
   >
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <div
+      class="col-span-6 mt-5 md:mt-0 flex items-center justify-center flex-shrink-0 text-white mr-6"
+    >
       <a class="flex justify-center items-center" href="">
         <img
           class="w-8 h-8 mr-2 animate-bounce"
@@ -46,7 +48,7 @@
           </a>
         </li>
 
-        <li (clickOutside)="closeDropDown()" class="md:order-2 relative">
+        <li (clickOutside)="closeDropDown()">
           <button
             *ngIf="translate.currentLang === 'en'"
             (click)="toggleLanguagesDropdown()"
@@ -95,7 +97,7 @@
                       alt=""
                     />
 
-                    <div class="text-xs ">English (US)</div>
+                    <div class="text-xs">English (US)</div>
                   </div>
                 </a>
                 <a
@@ -109,7 +111,7 @@
                       src="assets/images/Flags/spainc.svg"
                       alt=""
                     />
-                    <div class="text-xs ">Español (ES)</div>
+                    <div class="text-xs">Español (ES)</div>
                   </div>
                 </a>
               </li>
@@ -127,6 +129,82 @@
         </button>
       </div>
     </div>
+
+    <!-- Responsive Dropdown -->
+    <div
+      (clickOutside)="closeDropDownResponsive()"
+      class="language-dropdown col-span-5"
+    >
+      <button
+        *ngIf="translate.currentLang === 'en'"
+        (click)="toggleLanguagesDropdownResponsive()"
+        type="button"
+        data-dropdown-toggle="language-dropdown-menu-responsive"
+        class="inline-flex justify-center items-center p-2 text-sm text-teal-200 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+      >
+        <img
+          class="w-5 rounded-full mr-2"
+          src="assets/images/Flags/usasvg.svg"
+          alt=""
+        />
+        English (US)
+      </button>
+      <button
+        *ngIf="translate.currentLang === 'es'"
+        (click)="toggleLanguagesDropdownResponsive()"
+        type="button"
+        data-dropdown-toggle="language-dropdown-menu-responsive"
+        class="inline-flex justify-center items-center p-2 text-sm text-teal-200 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+      >
+        <img
+          class="w-5 rounded-full mr-2"
+          src="assets/images/Flags/spainc.svg"
+          alt=""
+        />
+        Español (ES)
+      </button>
+      <div
+        *ngIf="showLanguagesDropDownResponsive"
+        class="absolute mt-2 z-50 text-base list-none bg-[#072f48] rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+        id="language-dropdown-menu-responsive"
+      >
+        <ul class="py-1" role="none">
+          <li>
+            <a
+              (click)="switchLanguage('en')"
+              class="block py-2 px-2 text-sm text-teal-200 hover:text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer"
+              role="menuitem"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  class="w-5 rounded-full mr-2"
+                  src="assets/images/Flags/usasvg.svg"
+                  alt=""
+                />
+
+                <div class="text-xs">English (US)</div>
+              </div>
+            </a>
+            <a
+              (click)="switchLanguage('es')"
+              class="block py-2 px-2 text-sm text-teal-200 hover:text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer"
+              role="menuitem"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  class="w-5 rounded-full mr-2"
+                  src="assets/images/Flags/spainc.svg"
+                  alt=""
+                />
+                <div class="text-xs">Español (ES)</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hamburger -->
     <div class="hamburger">
       <div>
         <button (click)="activateHamMenu()">

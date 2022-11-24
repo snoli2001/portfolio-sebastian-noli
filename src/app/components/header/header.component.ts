@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
   listener: any;
   scrollPosition = 0;
   showLanguagesDropDown: boolean = false;
+  showLanguagesDropDownResponsive: boolean = false;
 
   constructor(
     private renderer2: Renderer2,
@@ -79,12 +80,22 @@ export class HeaderComponent implements OnInit {
     this.showLanguagesDropDown = !this.showLanguagesDropDown;
   }
 
+  toggleLanguagesDropdownResponsive(): void {
+    this.showLanguagesDropDownResponsive = !this.showLanguagesDropDownResponsive;
+  }
+
   switchLanguage(lang: string): void {
     this.translate.use(lang);
   }
   closeDropDown(): void {
     if (this.showLanguagesDropDown === true) {
       this.showLanguagesDropDown = false;
+    }
+  }
+
+  closeDropDownResponsive(): void {
+    if (this.showLanguagesDropDownResponsive === true) {
+      this.showLanguagesDropDownResponsive = false;
     }
   }
 }
